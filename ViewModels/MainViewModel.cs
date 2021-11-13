@@ -20,7 +20,7 @@ namespace AutoKeyPress.ViewModels
                     _textForDialog = "";
                 return _textForDialog;
             }
-            set { _textForDialog = value; OnPropertyChange("TextForDialog");                         }
+            set { _textForDialog = value; OnPropertyChange("TextForDialog");}
         }
 
         public Timer TimerKeyPress { get; set; } = new Timer();
@@ -93,5 +93,4 @@ namespace AutoKeyPress.ViewModels
         [DllImport("user32.dll", SetLastError = true)]
         public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, uint dwExtraInfo);
     }
-    
 }
