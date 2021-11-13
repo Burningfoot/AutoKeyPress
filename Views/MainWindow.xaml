@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoKeyPress"
         mc:Ignorable="d"
-        Title="TapWindow" Height="100" Width="180"
+        Title="Auto Key Press" Height="100" Width="180"
         ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -23,9 +23,9 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.Row="0" Content="Start" Command="{Binding BtnStart}"/>
-            <Button Grid.Column="0" Grid.Row="1" Content="Stop" Command="{Binding BtnStop}"/>
+            <Button Grid.Column="0" Grid.Row="0" Content="Start" Command="{Binding BtnStart}" Focusable="False"/>
+            <Button Grid.Column="0" Grid.Row="1" Content="Stop" Command="{Binding BtnStop}" Focusable="False"/>
         </Grid>
-        <Label Grid.Column="0" Grid.Row="0" Height="auto" Width="auto" Content="{Binding TextForDialog}"/>
+        <Label Grid.Column="0" Grid.Row="0" Height="auto" Width="auto" Content="{Binding TextForDialog, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
-</Window>
+</Window>       
